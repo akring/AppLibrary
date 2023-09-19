@@ -10,6 +10,10 @@ import SwiftUI
 public struct SettingAppItemCell: View {
     public var meta: AppMetaData
 
+    public init(meta: AppMetaData) {
+        self.meta = meta
+    }
+    
     public var body: some View {
         HStack(spacing: 15) {
             meta.icon()
