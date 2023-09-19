@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-enum AppMetaData {
+public enum AppMetaData {
     case starorder
     case fasting
     case newworld

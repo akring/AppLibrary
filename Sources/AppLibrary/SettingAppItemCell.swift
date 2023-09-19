@@ -7,10 +7,10 @@
 
 import SwiftUI
 
-struct SettingAppItemCell: View {
+public struct SettingAppItemCell: View {
     var meta: AppMetaData
 
-    var body: some View {
+    public var body: some View {
         HStack(spacing: 15) {
             meta.icon()
                 .resizable()
