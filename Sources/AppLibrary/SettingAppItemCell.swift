@@ -8,7 +8,7 @@
 import SwiftUI
 
 public struct SettingAppItemCell: View {
-    var meta: AppMetaData
+    public var meta: AppMetaData
 
     public var body: some View {
         HStack(spacing: 15) {
