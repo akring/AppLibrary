@@ -8,6 +8,9 @@
 import SwiftUI
 
 public struct SettingAppItemCell: View {
+    
+    @Environment(\.openURL) var openURL
+    
     public var meta: AppMetaData
 
     public init(meta: AppMetaData) {
@@ -30,6 +33,10 @@ public struct SettingAppItemCell: View {
             }
         }
         .padding(.vertical, 8)
+        .contentShape(Rectangle())
+        .onTapGesture {
+            openURL(URL(string: meta.storeURL())!)
+        }
     }
 }
 
