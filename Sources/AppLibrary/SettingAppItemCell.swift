@@ -31,7 +31,9 @@ public struct SettingAppItemCell: View {
                     .font(.footnote)
                     .foregroundStyle(Color.gray)
             }
+            Spacer()
         }
+        .frame(maxWidth: .infinity)
         .padding(.vertical, 8)
         .contentShape(Rectangle())
         .onTapGesture {
