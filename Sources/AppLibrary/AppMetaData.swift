@@ -50,7 +50,7 @@ extension AppMetaData {
         case .newworld:
             return "Your personal vocabulary book."
         case .wallpaper:
-            return "Neat AICT wallpaper for you."
+            return "Neat AICG wallpaper for you."
         }
     }
 
