@@ -14,7 +14,7 @@ public enum AppMetaData {
     case wallpaper
 }
 
-extension AppMetaData {
+public extension AppMetaData {
     func icon() -> Image {
         switch self {
         case .starorder:
