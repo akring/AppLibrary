@@ -28,9 +28,9 @@ public extension AppMetaData {
     case .wallpaper:
       return Image("wallpaper_icon", bundle: .module)
     case .orbitring:
-      return Image("orbitring_icon", bundle: .main)
+      return Image("orbitring_icon", bundle: .module)
     case .orbitread:
-      return Image("orbitread_icon", bundle: .main)
+      return Image("orbitread_icon", bundle: .module)
     }
   }
 
@@ -45,9 +45,9 @@ public extension AppMetaData {
     case .wallpaper:
       return "简明壁纸"
     case .orbitring:
-      return "Orbitring"
+      return "OrbitRing"
     case .orbitread:
-      return "Orbitread"
+      return "OrbitRead"
     }
   }
 
