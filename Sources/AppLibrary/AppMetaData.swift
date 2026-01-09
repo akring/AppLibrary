@@ -34,14 +34,22 @@ public extension AppMetaData {
     }
   }
 
+  private func isChinese() -> Bool {
+    guard let languageCode = Locale.current.languageCode else {
+      return false
+    }
+    return languageCode.hasPrefix("zh")
+  }
+
   func title() -> String {
+    let isZh = isChinese()
     switch self {
     case .starorder:
       return "Star Order"
     case .fasting:
       return "Fasting"
     case .newworld:
-      return "新词"
+      return isZh ? "新词" : "NewWord"
     case .wallpaper:
       return "简明壁纸"
     case .orbitring:
@@ -52,19 +60,20 @@ public extension AppMetaData {
   }
 
   func subtitle() -> String {
+    let isZh = isChinese()
     switch self {
     case .starorder:
-      return "Best GitHub star manager."
+      return isZh ? "最佳 GitHub 星标管理工具。" : "Best GitHub star manager."
     case .fasting:
-      return "Live a healty life."
+      return isZh ? "使用间歇性禁食，保持健康生活。" : "Live a healty life."
     case .newworld:
-      return "Your personal vocabulary book."
+      return isZh ? "支持 30 + 语言的 AI 单词学习助手。" : "Your personal vocabulary book."
     case .wallpaper:
-      return "Neat AICG wallpaper for you."
+      return isZh ? "为您精选的 AI 生成壁纸。" : "Neat AICG wallpaper for you."
     case .orbitring:
-      return "Powerful macOS ring launcher."
+      return isZh ? "像 FPS 游戏一样切换 Mac 应用。" : "Powerful macOS ring launcher."
     case .orbitread:
-      return "A smarter “Read-It-Later” assistant, powered by AI."
+      return isZh ? "带 AI 总结的稍后阅读助手。" : "A smarter \"Read-It-Later\" assistant, powered by AI."
     }
   }
 
